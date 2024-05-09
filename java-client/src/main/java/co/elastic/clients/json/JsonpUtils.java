@@ -50,6 +50,7 @@ public class JsonpUtils {
     @AllowForbiddenApis("Implementation of the JsonProvider lookup")
     public static JsonProvider provider() {
         JsonProvider result = systemJsonProvider;
+
         if (result == null) {
             result = findProvider();
             systemJsonProvider = result;
